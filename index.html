@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>○○FPオフィス | 個人事業主・マイクロ法人専門の財務コンサルタント</title>
+    <meta name="description" content="個人事業主・フリーランス・マイクロ法人経営者向けの財務コンサルティング。節税、資金繰り、社会保険料の最適化を数値で提案します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+        }
+        @media (min-width: 768px) {
+            .sticky-footer {
+                display: none;
+            }
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-900">○○FPオフィス</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-blue-900 transition">ホーム</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-900 transition">サービス</a>
+                    <a href="#column" class="text-gray-700 hover:text-blue-900 transition">コラム</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-900 transition">お問い合わせ</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:hidden hidden mt-4 space-y-2" id="mobileMenu">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-900">ホーム</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-blue-900">サービス</a>
+                <a href="#column" class="block py-2 text-gray-700 hover:text-blue-900">コラム</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-900">お問い合わせ</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-900 text-white">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative container mx-auto px-4 py-24 md:py-32">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    売上を追うより、<br class="md:hidden">『手取り』を守る方が確実です。
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                    個人事業主・マイクロ法人専門の財務コンサルタント。<br>
+                    あなたの事業と家計を数値で最適化します。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition">
+                        無料相談を予約する
+                    </a>
+                    <a href="#services" class="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition">
+                        サービスを見る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <img src="https://placehold.co/1200x400/1e3a8a/ffffff?text=Financial+Planning" alt="Financial Planning" class="w-full h-64 md:h-96 object-cover opacity-30">
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+                こんな悩みはありませんか？
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-gray-900">
+                        国保や税金の通知を見て、<br>ため息をついた
+                    </h3>
+                    <p class="text-gray-600 text-center">
+                        毎年届く通知書を見るたびに、負担の重さを実感していませんか？
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-gray-900">
+                        どんぶり勘定のまま<br>放置している
+                    </h3>
+                    <p class="text-gray-600 text-center">
+                        帳簿付けが後回しになり、経営状況が把握できていない状態ではありませんか？
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-gray-900">
+                        法人化のタイミングが<br>わからない
+                    </h3>
+                    <p class="text-gray-600 text-center">
+                        個人事業主のままでいいのか、法人化すべきなのか判断に迷っていませんか？
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+                私たちの強み
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="flex-shrink-0 w-20 h-20 bg-blue-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                            感情論ではなく、データに基づく論理的な提案
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            主観的な判断ではなく、数値とデータを徹底的に分析。あなたの事業規模、収益構造、将来計画に基づいた最適解を提示します。感情に左右されない、冷静で確実な財務戦略をご提案いたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="flex-shrink-0 w-20 h-20 bg-blue-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                            完全中立な立場でのキャッシュフロー診断
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            特定の金融商品や保険商品の販売を目的としていません。あなたの利益を最大化するため、完全に中立な立場から現状を分析し、改善点を明確にします。透明性の高いコンサルティングを提供いたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="flex-shrink-0 w-20 h-20 bg-blue-900 rounded-lg flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">
+                            オンライン（Zoom）全国対応 / 山梨県内は対面可
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            遠方の方でも気軽にご相談いただけるよう、Zoomを活用したオンライン相談に対応しています。山梨県内にお住まいの方は、対面でのご相談も可能です。お客様のご都合に合わせて、最適な方法でサポートいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Column Section (SEO) -->
+    <section id="column" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+                お役立ちコラム
+            </h2>
+            <p class="text-center text-gray-600 mb-12">
+                個人事業主・マイクロ法人経営者の皆様に役立つ情報を発信しています
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden card-hover block">
+                    <img src="https://placehold.co/400x200/1e3a8a/ffffff?text=Article+1" alt="個人事業主が経費にできる境界線とは？" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">
+                            個人事業主が経費にできる境界線とは？
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            経費計上できるものとできないものの判断基準を、具体例を交えて解説します。
+                        </p>
+                        <span class="inline-block mt-4 text-blue-900 font-semibold text-sm">
+                            続きを読む →
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden card-hover block">
+                    <img src="https://placehold.co/400x200/1e3a8a/ffffff?text=Article+2" alt="マイクロ法人設立の損益分岐点を徹底解説" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">
+                            マイクロ法人設立の損益分岐点を徹底解説
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            個人事業主から法人化するタイミングを、数値で明確に判断する方法をご紹介します。
+                        </p>
+                        <span class="inline-block mt-4 text-blue-900 font-semibold text-sm">
+                            続きを読む →
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden card-hover block">
+                    <img src="https://placehold.co/400x200/1e3a8a/ffffff?text=Article+3" alt="iDeCoと小規模企業共済、どっちが優先？" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">
+                            iDeCoと小規模企業共済、どっちが優先？
+                        </h3>
+                        <p class="text-gray-600 text-sm">
+                            個人事業主の老後資金準備。2つの制度の違いと、どちらを優先すべきかを解説します。
+                        </p>
+                        <span class="inline-block mt-4 text-blue-900 font-semibold text-sm">
+                            続きを読む →
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+                事務所概要 & プロフィール
+            </h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-50 rounded-lg p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <div class="flex-shrink-0">
+                            <div class="w-32 h-32 bg-blue-900 rounded-full flex items-center justify-center">
+                                <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">資格・認定</h3>
+                            <ul class="space-y-3 mb-8 text-gray-700">
+                                <li class="flex items-center justify-center md:justify-start">
+                                    <svg class="w-5 h-5 text-blue-900 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    2級ファイナンシャル・プランニング技能士
+                                </li>
+                                <li class="flex items-center justify-center md:justify-start">
+                                    <svg class="w-5 h-5 text-blue-900 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    AFP認定者
+                                </li>
+                            </ul>
+                            <div class="border-t pt-6">
+                                <p class="text-gray-700 leading-relaxed">
+                                    私自身も個人事業主として活動中。実体験に基づいた『守りの戦略』を提案します。<br>
+                                    売上を上げることよりも、手元に残るお金を最大化することに焦点を当てた、実践的な財務コンサルティングを提供いたします。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+                お問い合わせ・無料相談予約
+            </h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">お名前 <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">電話番号</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="business" class="block text-sm font-semibold text-gray-700 mb-2">事業形態</label>
+                        <select id="business" name="business" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <option value="">選択してください</option>
+                            <option value="sole">個人事業主</option>
+                            <option value="micro">マイクロ法人</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">ご相談内容 <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition">
+                        送信する
+                    </button>
+                </form>
+                <p class="mt-6 text-sm text-gray-600 text-center">
+                    本サイトは情報提供およびコンサルティング業務の受付を目的としています。<br>
+                    保険の直接勧誘（募集）は行っておりません。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="text-2xl font-bold mb-4">○○FPオフィス</div>
+                <p class="text-gray-400">個人事業主・マイクロ法人専門の財務コンサルタント</p>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 ○○FPオフィス. All rights reserved.</p>
+                <p class="mt-2">本サイトは情報提供およびコンサルティング業務の受付を目的としています。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Footer (Mobile Only) -->
+    <div class="sticky-footer bg-blue-900 text-white p-4 shadow-lg">
+        <a href="#contact" class="block w-full text-center bg-white text-blue-900 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition">
+            無料相談予約
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (placeholder)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('お問い合わせありがとうございます。後日、担当者よりご連絡いたします。');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
