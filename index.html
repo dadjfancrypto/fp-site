@@ -68,7 +68,7 @@
         .hero-content {
             flex: 1;
             min-width: 300px;
-            padding-right: 20px;
+            padding-left: 20px;
         }
         .catch-copy {
             color: var(--primary-color);
@@ -151,6 +151,19 @@
         .chat-advisor .chat-icon {
             border-color: var(--primary-color);
         }
+        .chat-name {
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .chat-user .chat-name {
+            color: #555;
+        }
+        .chat-advisor .chat-name {
+            text-align: right;
+            color: var(--primary-color);
+        }
         .bubble {
             background: #f1f1f1;
             padding: 20px;
@@ -180,7 +193,106 @@
             border-left-color: #bbdefb;
         }
 
-        /* --- 4. 実績（Case Study） --- */
+        /* --- 4. 固定費の4大支出 --- */
+        .big4-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+        }
+        .big4-section h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .big4-section .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .big4-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .big4-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .big4-card:hover {
+            transform: translateY(-5px);
+        }
+        .big4-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .big4-card h3 {
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+        }
+        .big4-amount {
+            font-size: 1.8rem;
+            color: #d32f2f;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .big4-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        .lifetime-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        .lifetime-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .lifetime-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .lifetime-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        .lifetime-amount {
+            font-size: 1.5rem;
+            color: #d32f2f;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .lifetime-savings {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 5px;
+        }
+        .lifetime-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* --- 5. 実績（Case Study） --- */
         .case-section {
             padding: 60px 20px;
             background-color: #fafafa;
@@ -220,6 +332,133 @@
             font-weight: bold;
             text-align: center;
             margin: 15px 0;
+        }
+
+        /* --- 5. 固定費の種類と削減ポイント --- */
+        .tips-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .tip-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .tip-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .tip-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .tip-card li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* --- 削減金額の目安 --- */
+        .saving-section {
+            padding: 60px 20px;
+            background-color: #f0f8ff;
+        }
+        .saving-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .saving-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .saving-amount {
+            font-size: 1.8rem;
+            color: #d32f2f;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* --- 見落としポイント --- */
+        .overlook-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        .overlook-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .overlook-item {
+            background: #fff3cd;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        .overlook-item strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* --- 見直しのタイミング --- */
+        .timing-section {
+            padding: 60px 20px;
+            background-color: #f5f5f5;
+        }
+        .timing-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .timing-item {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .timing-item::before {
+            content: '📅';
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- サポート内容 --- */
+        .support-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .support-card {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #bbdefb;
+        }
+        .support-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
         }
 
         /* --- 5. プロフィール --- */
@@ -330,7 +569,7 @@
                 text-align: center;
             }
             .hero-content {
-                padding-right: 0;
+                padding-left: 0;
             }
             .hero-img {
                 margin-bottom: 20px;
@@ -354,6 +593,17 @@
             .chat-advisor .bubble::after {
                 display: none; /* スマホでは吹き出しのしっぽを消してシンプルに */
             }
+            .tips-grid,
+            .saving-grid,
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+            .big4-grid {
+                grid-template-columns: 1fr;
+            }
+            .timing-content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -362,23 +612,32 @@
 <div class="container">
 
     <header class="hero">
-        <div class="hero-content">
-            <span class="catch-copy">家計のムダを、プロが徹底カット！</span>
-            <h1>我慢なしで手取りが増える。<br><span>固定費の見直し</span>始めませんか？</h1>
-            <p>「なんとなく高い…」その感覚は正しいです。<br>保険・スマホ・サブスクを見直すだけで、<br>年間10万円以上浮くことも珍しくありません。</p>
-            <div style="margin-top: 30px;">
-                <a href="#contact" class="btn btn-large">無料診断を申し込む</a>
-            </div>
-        </div>
         <div class="hero-img">
             <img src="character.png" alt="FPアドバイザー">
+        </div>
+        <div class="hero-content">
+            <span class="catch-copy" style="background: #ffeb3b; color: #d32f2f; font-weight: bold; padding: 8px 20px; border-radius: 25px;">完全無料</span>
+            <h1>固定費の見直し、<br>私に相談してみませんか？</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 15px; color: #d32f2f; font-weight: bold;">完全無料で、あなたの家計を徹底サポートします。</p>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                自分で調べるのはめんどくさい…<br>
+                調べても、どれがいいのか分からない…<br>
+                実行するのが大変そう…<br><br>
+                <strong>そんなあなたに、会話で一緒に考えます。</strong><br>
+                めんどくさがりな人こそ、私に相談してください。<br>
+                スマホ・サブスク・光熱費などを見直すだけで、<br>
+                年間10万円以上の削減ができるかもしれません。
+            </p>
+            <div style="margin-top: 30px;">
+                <a href="#contact" class="btn btn-large">今すぐ完全無料相談を申し込む</a>
+            </div>
         </div>
     </header>
 
     <section class="problem-section">
         <h2>こんな「もったいない」していませんか？</h2>
         <ul class="check-list">
-            <li>言われるがままに入った保険、内容を覚えていない</li>
+            <li>言われるがままに入ったサービス、内容を覚えていない</li>
             <li>スマホ代が毎月5,000円以上かかっている</li>
             <li>使っていないサブスク（月額課金）がある気がする</li>
             <li>電気代やガス代、もっと安くならないか疑問だ</li>
@@ -393,21 +652,129 @@
             そのお悩み、私にお任せください！
         </h2>
         <div class="chat-container">
+            <div class="chat-row chat-advisor">
+                <div class="chat-icon"><img src="character.png" alt="アドバイザー"></div>
+                <div style="flex: 1;">
+                    <div class="chat-name">坂本</div>
+                    <div class="bubble">
+                        ファイナンシャルプランナーの坂本です。固定費の見直しについて、お気軽にご相談ください。
+                    </div>
+                </div>
+            </div>
             <div class="chat-row chat-user">
                 <div class="chat-icon"><img src="https://placehold.jp/150x150.png?text=You" alt="ユーザー"></div>
-                <div class="bubble">
-                    「でも、見直すのって面倒くさそうだし、変な保険を売り込まれるのも嫌なんです…」
+                <div style="flex: 1;">
+                    <div class="bubble">
+                        「毎月の支払いがなんとなく高い気がするんですけど、何から見直せばいいか分からなくて…」
+                    </div>
                 </div>
             </div>
             <div class="chat-row chat-advisor">
                 <div class="chat-icon"><img src="character.png" alt="アドバイザー"></div>
-                <div class="bubble">
-                    <strong>ご安心ください。私は特定の保険会社の社員ではありません。</strong><br>
-                    「中立なFP」として、あなたの家計全体のバランスを見て、本当に必要なものだけを残すアドバイスをします。<br>
-                    面倒な手続きの方法も、私が丁寧にサポートしますよ！
+                <div style="flex: 1;">
+                    <div class="chat-name">坂本</div>
+                    <div class="bubble">
+                        よくあるお悩みです！固定費は主に「スマホ代」「サブスク」「光熱費」などに分かれます。<br>
+                        まずは現状を一緒に確認して、削減できるポイントを洗い出していきましょう。無理に変える必要はありませんよ。
+                    </div>
+                </div>
+            </div>
+            <div class="chat-row chat-user">
+                <div class="chat-icon"><img src="https://placehold.jp/150x150.png?text=You" alt="ユーザー"></div>
+                <div style="flex: 1;">
+                    <div class="bubble">
+                        「でも、見直すのって面倒くさそうだし、変な商品を売り込まれるのも嫌なんです…」
+                    </div>
+                </div>
+            </div>
+            <div class="chat-row chat-advisor">
+                <div class="chat-icon"><img src="character.png" alt="アドバイザー"></div>
+                <div style="flex: 1;">
+                    <div class="chat-name">坂本</div>
+                    <div class="bubble">
+                        <strong>ご安心ください。私は特定の会社の社員ではありません。</strong><br>
+                        「中立なFP」として、あなたの家計全体のバランスを見て、本当に必要なものだけを残すアドバイスをします。<br>
+                        面倒な手続きの方法も、私が丁寧にサポートしますよ！
+                    </div>
+                </div>
+            </div>
+            <div class="chat-row chat-user">
+                <div class="chat-icon"><img src="https://placehold.jp/150x150.png?text=You" alt="ユーザー"></div>
+                <div style="flex: 1;">
+                    <div class="bubble">
+                        「実際にどれくらい削減できるんですか？生活レベルを下げるのは嫌なんです…」
+                    </div>
+                </div>
+            </div>
+            <div class="chat-row chat-advisor">
+                <div class="chat-icon"><img src="character.png" alt="アドバイザー"></div>
+                <div style="flex: 1;">
+                    <div class="chat-name">坂本</div>
+                    <div class="bubble">
+                        生活レベルを下げる必要は全くありません！<br>
+                        重複しているサービスや、使っていないオプションを見直すだけで、年間5〜20万円削減できるケースが多いです。<br>
+                        具体的な金額は、お話を聞かせていただければシミュレーションしてお見せします。
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- 固定費の4大支出 -->
+    <section class="big4-section">
+        <h2>固定費の4大支出</h2>
+        <p class="subtitle">多くの家計で、この4つが固定費の大部分を占めています</p>
+        <div class="big4-grid">
+            <div class="big4-card">
+                <div class="big4-icon">🏠</div>
+                <h3>住居費</h3>
+                <div class="big4-amount">月50,000円〜</div>
+                <p class="big4-desc">家賃・住宅ローンで固定費の最大の支出</p>
+            </div>
+            <div class="big4-card">
+                <div class="big4-icon">⚡</div>
+                <h3>光熱費</h3>
+                <div class="big4-amount">月15,000円〜</div>
+                <p class="big4-desc">電気・ガス・水道で年間18万円以上</p>
+            </div>
+            <div class="big4-card">
+                <div class="big4-icon">📱</div>
+                <h3>通信費</h3>
+                <div class="big4-amount">月10,000円〜</div>
+                <p class="big4-desc">スマホ+インターネット回線で年間12万円以上</p>
+            </div>
+            <div class="big4-card">
+                <div class="big4-icon">🛡️</div>
+                <h3>保険料</h3>
+                <div class="big4-amount">月10,000円〜</div>
+                <p class="big4-desc">生命保険・医療保険などで年間12万円以上</p>
+            </div>
+        </div>
+        <p style="margin-top: 40px; font-size: 1.2rem; font-weight: bold;">
+            この4つを見直すだけで、<span style="font-size: 1.5rem; color: #ffeb3b;">年間10万円以上</span>の削減ができるかもしれません！
+        </p>
+    </section>
+
+    <!-- 生涯で支払う金額 -->
+    <section class="lifetime-section">
+        <h2 style="text-align: center; margin-bottom: 15px; color: var(--primary-color);">30歳から85歳まで、通信費だけでこれだけの金額</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #666;">
+            30歳の人が85歳まで（55年間）支払い続けた場合の金額です。見直しでどれだけ削減できるか、具体的に計算してみました。
+        </p>
+        <div class="lifetime-grid">
+            <div class="lifetime-card">
+                <h3>📱 通信費</h3>
+                <p><strong>現在の月額：10,000円</strong></p>
+                <div class="lifetime-amount">生涯支払額：約660万円</div>
+                <p style="margin-top: 20px;"><strong>削減後の月額：3,000円</strong></p>
+                <div style="font-size: 1.2rem; color: #666; margin: 10px 0;">削減後の生涯支払額：約198万円</div>
+                <div class="lifetime-savings">削減額：約462万円</div>
+                <p class="lifetime-note">※月10,000円 × 12ヶ月 × 55年 = 660万円<br>月3,000円 × 12ヶ月 × 55年 = 198万円</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; font-size: 1.3rem; font-weight: bold; color: #d32f2f;">
+            通信費を見直すだけで、<span style="font-size: 1.8rem;">生涯で約462万円</span>の削減ができるかもしれません！
+        </p>
     </section>
 
     <section class="case-section">
@@ -417,7 +784,7 @@
         <div class="case-cards">
             <div class="case-card">
                 <div class="case-title">30代夫婦（共働き）</div>
-                <p>重複していた保険とスマホプランを見直し。</p>
+                <p>重複していたサービスとスマホプランを見直し。</p>
                 <div class="case-result">年間 18万円 削減!</div>
                 <p style="font-size: 0.9rem; color: #666;">浮いたお金で家族旅行に行けました！</p>
             </div>
@@ -430,15 +797,178 @@
         </div>
     </section>
 
+    <!-- 固定費の種類と削減ポイント -->
+    <section class="tips-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">固定費の種類と削減ポイント</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>📱 スマホ代</h3>
+                <ul>
+                    <li>格安SIMへの乗り換え（月2,000円〜削減可能）</li>
+                    <li>使っていないオプションの解約</li>
+                    <li>データ容量プランの見直し</li>
+                    <li>家族割の活用</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>💳 サブスク（月額課金）</h3>
+                <ul>
+                    <li>使っていないサービスの解約</li>
+                    <li>年払いへの変更で割引</li>
+                    <li>複数サービスを1つに統合</li>
+                    <li>無料トライアルの見直し</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>⚡ 光熱費</h3>
+                <ul>
+                    <li>電力会社の見直し（新電力への切り替え）</li>
+                    <li>ガス会社の見直し</li>
+                    <li>契約プランの最適化</li>
+                    <li>省エネ家電への買い替え検討</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>📺 その他の固定費</h3>
+                <ul>
+                    <li>インターネット回線の見直し</li>
+                    <li>クレジットカードの年会費</li>
+                    <li>ジムや習い事の見直し</li>
+                    <li>駐車場代の見直し</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 削減できる金額の目安 -->
+    <section class="saving-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">削減できる金額の目安</h2>
+        <p style="text-align: center; margin-bottom: 30px;">項目別の削減目安です。複数見直すことで、さらに大きな削減が可能です。</p>
+        <div class="saving-grid">
+            <div class="saving-item">
+                <h3>スマホ代</h3>
+                <div class="saving-amount">月2,000円〜</div>
+                <p>年間24,000円〜削減可能</p>
+            </div>
+            <div class="saving-item">
+                <h3>サブスク</h3>
+                <div class="saving-amount">月1,000円〜</div>
+                <p>年間12,000円〜削減可能</p>
+            </div>
+            <div class="saving-item">
+                <h3>光熱費</h3>
+                <div class="saving-amount">月3,000円〜</div>
+                <p>年間36,000円〜削減可能</p>
+            </div>
+            <div class="saving-item">
+                <h3>その他</h3>
+                <div class="saving-amount">月2,000円〜</div>
+                <p>年間24,000円〜削減可能</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 1.1rem; font-weight: bold;">
+            複数項目を見直すことで、<span style="color: #d32f2f; font-size: 1.3rem;">年間10万円以上</span>の削減ができるかもしれません！
+        </p>
+    </section>
+
+    <!-- よくある見落としポイント -->
+    <section class="overlook-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">よくある見落としポイント</h2>
+        <div class="overlook-list">
+            <div class="overlook-item">
+                <strong>🔍 自動更新の罠</strong>
+                <p>気づかないうちに自動更新されているサービスはありませんか？年1回は見直しのタイミングです。</p>
+            </div>
+            <div class="overlook-item">
+                <strong>💳 クレジットカードの年会費</strong>
+                <p>使っていないクレジットカードの年会費がかかっていませんか？解約するだけで削減できます。</p>
+            </div>
+            <div class="overlook-item">
+                <strong>📱 スマホの機種代金</strong>
+                <p>機種代金が月額に含まれている場合、完済後も高いプランのままになっていませんか？</p>
+            </div>
+            <div class="overlook-item">
+                <strong>📺 使っていないチャンネル</strong>
+                <p>テレビや動画配信サービスで、見ていないチャンネルやプランに加入していませんか？</p>
+            </div>
+            <div class="overlook-item">
+                <strong>🏋️ 使っていないジムや習い事</strong>
+                <p>通っていないジムや習い事の月額料金がかかっていませんか？解約するだけで削減できます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 見直しのタイミング -->
+    <section class="timing-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">見直しのタイミング</h2>
+        <div class="timing-content">
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+                固定費の見直しは、<strong>いつでも始められます</strong>。ただし、以下のタイミングがおすすめです。
+            </p>
+            <div class="timing-item">
+                <strong>年1回の見直し</strong><br>
+                年に1回、固定費全体を見直す習慣をつけましょう。自動更新されているサービスもチェックできます。
+            </div>
+            <div class="timing-item">
+                <strong>ライフステージの変化時</strong><br>
+                結婚、転職、引っ越しなど、生活が変わるタイミングで見直すと、より効果的です。
+            </div>
+            <div class="timing-item">
+                <strong>収入が減った時</strong><br>
+                収入が減った時こそ、固定費の見直しが重要です。生活レベルを下げずに家計を立て直せます。
+            </div>
+            <div class="timing-item">
+                <strong>「高いな」と感じた時</strong><br>
+                なんとなく高いと感じた時が、見直しのベストタイミングです。その感覚は正しいことが多いです。
+            </div>
+        </div>
+    </section>
+
+    <!-- サポート内容の詳細 -->
+    <section class="support-section">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">サポート内容の詳細</h2>
+        <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+            めんどくさがりな人でも、安心して相談できるサポート内容です。
+        </p>
+        <div class="support-grid">
+            <div class="support-card">
+                <h3>📊 現状分析</h3>
+                <p>あなたの固定費を一緒に確認し、削減できるポイントを洗い出します。何から始めればいいか、分かりやすくお伝えします。</p>
+            </div>
+            <div class="support-card">
+                <h3>💰 削減シミュレーション</h3>
+                <p>「これを変えると、年間いくら削減できるか」を具体的な金額でシミュレーションしてお見せします。</p>
+            </div>
+            <div class="support-card">
+                <h3>📝 手続きのサポート</h3>
+                <p>見直しを決めたら、手続きの方法を丁寧にサポートします。どこに連絡すればいいか、何を準備すればいいか、一緒に確認します。</p>
+            </div>
+            <div class="support-card">
+                <h3>💬 会話形式の相談</h3>
+                <p>難しい専門用語は使いません。会話形式で、あなたのペースに合わせて一緒に考えます。</p>
+            </div>
+            <div class="support-card">
+                <h3>🔄 継続的なサポート</h3>
+                <p>一度の相談で終わりではありません。見直し後のフォローアップも可能です。</p>
+            </div>
+            <div class="support-card">
+                <h3>🎯 中立な立場での提案</h3>
+                <p>特定の会社に偏らず、あなたにとって一番良い選択肢を提案します。無理な勧誘は一切ありません。</p>
+            </div>
+        </div>
+    </section>
+
     <section class="profile-section">
         <div class="profile-container">
             <img src="character.png" alt="プロフィール画像" class="profile-img">
             <div class="profile-text">
-                <h3>固定費削減アドバイザー</h3>
+                <h3>ファイナンシャルプランナー坂本</h3>
                 <p>
                     初めまして。これまで多くの方の家計相談に乗ってきました。<br>
-                    私のモットーは<strong>「固定費削減は、一番確実な投資である」</strong>です。<br>
+                    <strong>固定費の削減、一番得意です。</strong><br>
                     給料を月1万円上げるのは大変ですが、固定費を月1万円下げるのは、正しい知識があれば誰でもできます。<br>
+                    固定費削減は、一番確実な投資であると考えています。<br>
+                    めんどくさがりな人でも、会話形式で一緒に考えれば、必ず削減できます。<br>
                     あなたの生活を守るため、中立的な立場から全力でサポートします。
                 </p>
             </div>
@@ -476,7 +1006,12 @@
         
         <div class="faq-item">
             <div class="question">本当に無料ですか？後から請求されませんか？</div>
-            <div class="answer">はい、相談料は完全無料です。もし保険の見直し等でご契約になった場合、提携会社からの手数料で運営しているため、お客様から直接お金をいただくことはありません。</div>
+            <div class="answer">はい、相談料は完全無料です。もしサービスの見直し等でご契約いただいた場合、アフィリエイトなどで運営しているため、お客様から直接お金をいただくことはありません。</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="question">なんで無料なの？</div>
+            <div class="answer">めんどくさがりな人にこそ、気軽に相談してほしいからです。相談後にサービスの見直しでご契約いただいた場合、アフィリエイトなどで運営しているため、相談時は完全無料です。まずは「一緒に考える」ことから始めましょう。</div>
         </div>
         
         <div class="faq-item">
@@ -486,7 +1021,7 @@
 
         <div class="faq-item">
             <div class="question">準備するものはありますか？</div>
-            <div class="answer">可能であれば「家計簿」や「通帳」「保険証券」「スマホの請求書」などがあると、より具体的な金額が出せますが、なくても概算での相談は可能です。</div>
+            <div class="answer">可能であれば「家計簿」や「通帳」「各種契約書類」「スマホの請求書」などがあると、より具体的な金額が出せますが、なくても概算での相談は可能です。</div>
         </div>
     </section>
 
@@ -503,6 +1038,14 @@
             <p>© 2025 固定費削減相談窓口 All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- アフィリエイトリンク -->
+    <div style="text-align: center; padding: 20px; background-color: #f5f5f5;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=45KPW0+B3HVOY+1WP2+6G4HD" rel="nofollow">
+            <img border="0" width="250" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=251229456671&wid=001&eno=01&mid=s00000008903001083000&mc=1">
+        </a>
+        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=45KPW0+B3HVOY+1WP2+6G4HD" alt="">
+    </div>
 
 </div>
 
