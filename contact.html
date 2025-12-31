@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .required {
+            color: #d32f2f;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .help-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        .submit-btn {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #e68a00;
+        }
+        .contact-links {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        .contact-links a {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 12px 30px;
+            background-color: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .contact-links a:hover {
+            background-color: #004494;
+        }
+        .qr-code {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .qr-code img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .qr-code p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>お問い合わせ</h1>
+        
+        <h2>お問い合わせフォーム</h2>
+        <p>以下のフォームに必要事項をご入力のうえ、送信してください。</p>
+        
+        <form id="contactForm" action="https://formspree.io/f/xkondabg" method="post">
+            <input type="hidden" name="_next" value="https://your-domain.com/thanks.html">
+            <div class="form-group">
+                <label for="name">お名前 <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label>ご相談したい内容 <span class="required">*</span></label>
+                <p class="help-text" style="margin-bottom: 15px;">該当する項目を1つ以上選択してください</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <label style="display: flex; align-items: center; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="category" value="光熱費" style="width: auto; margin-right: 10px;">
+                        <span>⚡ 光熱費（電気・ガス・水道）</span>
+                    </label>
+                    <label style="display: flex; align-items: center; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="category" value="通信費" style="width: auto; margin-right: 10px;">
+                        <span>📱 通信費（スマホ・インターネット）</span>
+                    </label>
+                    <label style="display: flex; align-items: center; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="category" value="その他" style="width: auto; margin-right: 10px;">
+                        <span>その他</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                <textarea id="message" name="message" required></textarea>
+                <p class="help-text">
+                    ※できるだけ具体的にご記入ください。<br>
+                    （例：現在の固定費の状況、ご相談内容、削減したい金額など）<br>
+                    ご記入が難しい場合は、直接ヒアリングでも対応いたしますので、無理にご記入いただかなくても大丈夫です。
+                </p>
+            </div>
+            
+            <button type="submit" class="submit-btn">送信する</button>
+        </form>
+        
+        <div class="contact-links">
+            <a href="https://line.me/R/ti/p/@409ddkri">LINEで相談する</a>
+            <a href="tel:080-2890-8206">電話する（080-2890-8206）</a>
+        </div>
+        
+        <div class="qr-code">
+            <p>LINEで相談する場合は、こちらのQRコードを読み取ってください</p>
+            <img src="https://qr-official.line.me/gs/M_409ddkri_GW.png?oat_content=qr" alt="LINE QRコード">
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // チェックボックスのバリデーション
+            const checkboxes = document.querySelectorAll('input[name="category"]:checked');
+            if (checkboxes.length === 0) {
+                e.preventDefault();
+                alert('ご相談したい内容を1つ以上選択してください。');
+                return false;
+            }
+            // Formspreeに送信されるように、preventDefaultを削除
+            // 送信後、Formspreeが自動でサンクスページにリダイレクトします
+        });
+    </script>
+</body>
+</html>
